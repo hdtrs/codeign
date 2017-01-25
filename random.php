@@ -2,7 +2,7 @@
 
 
 
-
+dis gun b gud
 
 
 
@@ -13,9 +13,6 @@ Es ierakstu virs liinijaam kko, tu zem.
 
 
 
-$this->load->helper('url');
-
-$this->load->model('m_login');
 
 
 
