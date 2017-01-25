@@ -1,3 +1,3 @@
 
 
-<p>Persona ar vārdu <b> <?php print $Vards  ?> </b> tika pievienots datu bāzei <p>
+<p>Persona ar vārdu <b> <?php print $name  ?> </b> tika pievienots datu bāzei <p>

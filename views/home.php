@@ -31,7 +31,7 @@ if($level == "3")
 
 <h2>Sveiki,<?php echo $user->name;?>, Tu esi ielogojies kā Administrators <?php echo anchor('login/logout', 'Izlogoties');
 echo "<br>";
-echo anchor('home/arsts','Doties uz profilu');
+echo anchor('home/arsts','Pievienot ārstus');
 ?>
 </h2>
 
@@ -43,7 +43,7 @@ echo anchor('home/arsts','Doties uz profilu');
 
 ?>
 
-<h2>Hi <?php echo $user->name;?>, Welcome to Login you as a Operator <?php echo anchor('login/logout', 'Logout');?></h2>
+<h2>Sveiki, <?php echo $user->name;?>,Tu esi ielogojies kā Ārsts <?php echo anchor('login/logout', 'Izlogoties');?></h2>
 
 <?php
 

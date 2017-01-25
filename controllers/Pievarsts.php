@@ -6,7 +6,7 @@ class Pievarsts extends CI_Controller {
         //validaacija
         $rules = array(
             "Vards" => array(
-                "field"=>"Vards",
+                "field"=>"name",
                 "label"=>"Vards",
                 "rules"=>"required"
             ),
@@ -23,22 +23,22 @@ class Pievarsts extends CI_Controller {
                 "rules"=>"required"
             ),
             
-            "Lietotajvards" => array(
-                "field"=>"Lietotajvards",
-                "label"=>"Lietotajvards",
+            "username" => array(
+                "field"=>"username",
+                "label"=>"username",
                 "rules"=>"required"
             ),
                 
-            "Parole" => array(
-                "field"=>"Parole",
-                "label"=>"Parole",
+            "password" => array(
+                "field"=>"password",
+                "label"=>"password",
                 "rules"=>"required"
             ),
             
             "pass_conf" => array(
                 "field"=>"pass_conf",
                 "label"=>"Repeat Password",
-                "rules"=>"required|matches[Parole]"
+                "rules"=>"required|matches[password]"
             )
         );
         //set
@@ -49,15 +49,19 @@ class Pievarsts extends CI_Controller {
             //Datu baazes inputs
             
             $data=array(
-                'Vards'=> $this->input->post('Vards'),
+                'name'=> $this->input->post('name'),
                 'Uzvards'=> $this->input->post('Uzvards'),
                 'Amats'=> $this->input->post('Amats'),
-                'Lietotajvards'=> $this->input->post('Lietotajvards'),
-                'Parole'=>md5( $this->input->post('Parole'))
+                'username'=> $this->input->post('username'),
+                'password'=>md5( $this->input->post('password')),
+                'status'=> '1',
+                'level'=>'1'
+                
                 );
-            $this->db->insert('arsti', $data);
+            $this->db->insert('lietotaji',$data);
             
             $this->load->view('Success',$data);
+            
             
                  }
             }

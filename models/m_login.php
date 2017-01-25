@@ -20,7 +20,7 @@ public function takeUser($username, $password, $status, $level)
 
 $this->db->select('*');
 
-$this->db->from('user');
+$this->db->from('lietotaji');
 
 $this->db->where('username', $username);
 
@@ -46,7 +46,7 @@ $this->db->select('name');
 
 $this->db->where('username', $username);
 
-$query = $this->db->get('user');
+$query = $this->db->get('lietotaji');
 
 return $query->row();
 

@@ -8,8 +8,8 @@
 <?= form_open(base_url()."Pievarsts") ?>
 <table>
     <tr><td>
-            Vārds<td><?= form_input(array ("name"=>"Vards","value"=>set_value("Vards")))?>
-            <td><?= form_error("Vards") ?>
+            Vārds<td><?= form_input(array ("name"=>"name","value"=>set_value("name")))?>
+            <td><?= form_error("name") ?>
     </tr>
         
      <tr><td>
@@ -23,12 +23,12 @@
     </tr>
 
  <tr><td>
-            Lietotājvārds<td><?= form_input(array ("name"=>"Lietotajvards","value"=>set_value("Lietotajvards")))?>
-            <td><?= form_error("Lietotajvards") ?>
+            Lietotājvārds<td><?= form_input(array ("name"=>"username","value"=>set_value("username")))?>
+            <td><?= form_error("username") ?>
     </tr>
 
  <tr><td>
-            Parole<td><?= form_password(array ("name"=>"Parole"))?>
+            Parole<td><?= form_password(array ("name"=>"password"))?>
             <td><?= form_error("password") ?>
     </tr>
 
@@ -36,6 +36,9 @@
             Paroles Apstiprināšana <td><?= form_password(array ("name"=>"pass_conf"))?>
             <td><?= form_error("pass_conf") ?>
     </tr>
+    
+    
+    
 
         <tr><td>
                 <?=form_submit(array("name"=>"submit","value"=>"Reģistrēt")) ?>
