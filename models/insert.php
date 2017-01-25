@@ -1,8 +1,14 @@
 <?php
+if(!defined('BASEPATH')) exit('Hacking Attempt!');
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+class insert extends CI_Model{
+function __construct() {
+parent::__construct();
+}
 
+function form_insert($data){
+// ievietosana datu baazee
+$this->db->insert('lietotaji',$data);
+}
+}
+?>

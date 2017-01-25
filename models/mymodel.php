@@ -5,6 +5,7 @@ Class Mymodel Extends CI_Model
 {
     function __construct()
     {
+        
         parent::__construct();
         
     }
@@ -16,3 +17,4 @@ Class Mymodel Extends CI_Model
         return $query->result();
     }
 }   ?>
+

@@ -47,14 +47,8 @@ $this->load->view('home', $data);
 
 public function arsts() 
 {
-    $data['title']="REKT";
-        if ($this->session->userdata('isLogin')==FALSE)
-        {
-          $data['message_access']="you are not permitted to acces this page";  
-        }  else {
-        echo "You can view this page"; 
-        }
-        $this->load->view('arsts',$data);
+   
+        $this->load->view('arsts');
 
 }        
 

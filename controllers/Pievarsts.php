@@ -1,8 +1,33 @@
 <?php
-class Pievarsts extends CI_Controller {
+class Pievarsts extends CI_Controller 
+{
+    public function __construct()
+
+{
+
+parent::__construct();
+
+$this->load->helper('url');
+
+$this->load->model('m_login');
+
+
+}
     
     public function index()
     {
+        $data['level'] = $this->session->userdata('level');
+        if($this->session->userdata('isLogin') == FALSE)
+
+{
+
+redirect('login/login_form');
+
+}else
+    
+        
+
+
         //validaacija
         $rules = array(
             "Vards" => array(
@@ -47,7 +72,7 @@ class Pievarsts extends CI_Controller {
             $this->load->view("arsts");
         } else {
             //Datu baazes inputs
-            
+            $this->load->model('insert');
             $data=array(
                 'name'=> $this->input->post('name'),
                 'Uzvards'=> $this->input->post('Uzvards'),
@@ -58,7 +83,10 @@ class Pievarsts extends CI_Controller {
                 'level'=>'1'
                 
                 );
-            $this->db->insert('lietotaji',$data);
+            //data uz modeli
+            $this->insert->form_insert($data);
+            //skats
+            
             
             $this->load->view('Success',$data);
             

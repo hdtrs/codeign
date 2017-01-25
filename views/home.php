@@ -43,7 +43,9 @@ echo anchor('home/arsts','Pievienot ārstus');
 
 ?>
 
-<h2>Sveiki, <?php echo $user->name;?>,Tu esi ielogojies kā Ārsts <?php echo anchor('login/logout', 'Izlogoties');?></h2>
+<h2>Sveiki, <?php echo $user->name;?>,Tu esi ielogojies kā Ārsts <?php echo anchor('login/logout', 'Izlogoties');
+echo "<br>";
+echo anchor('Search','Meklēt lietotājus Pēc lietotāja ID');?></h2>
 
 <?php
 
